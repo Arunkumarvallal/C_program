@@ -41,7 +41,7 @@ for(ind=0;ind<noe;ind++){
 
 for(row=0;row<nov;row++){
     for(tptr=head[row];tptr;tptr=tptr->next)
-        printf("%d \t",tptr->weight);
+        printf("%c(%d) \t",tptr->ch,tptr->weight);
     printf("\n");
 }
 

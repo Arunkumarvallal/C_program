@@ -41,6 +41,13 @@ newNode->next=NULL;
 
 if(startArr==NULL){                             //headArr start if NULL create a newHead
     startArr=createHeadarr(ind_ch);
+     if(startArr->link==NULL)            //if linking node is empty then make this as linking node starting address
+                        startArr->link=newNode;
+                    else{
+
+                        for(tptr=startArr->link;tptr->next;tptr=tptr->next);            //if exist then add it in the last of link nodes
+                                tptr->next=newNode;
+                    }
 }
 else{                                                  //if not null then
     for(tptrhead=startArr;tptrhead&&tptrhead->alpha!=ind_ch;prev=tptrhead,tptrhead=tptrhead->nex);
@@ -67,7 +74,7 @@ for(tptrhead=startArr;tptrhead;tptrhead=tptrhead->nex){
 
     for(tptr=tptrhead->link;tptr;tptr=tptr->next){
 
-        printf("%c\t->\t%c =\t%d \n",tptrhead->alpha,tptr->ch,tptr->weight);
+        printf("%c\t->\t%c =\t%d /t",tptrhead->alpha,tptr->ch,tptr->weight);
     }
 
 }
