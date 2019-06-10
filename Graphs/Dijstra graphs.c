@@ -68,17 +68,13 @@ heads[min_char-65].vist=VISTED;
 count++;
 for(tptr=head[min_char-65];tptr;tptr=tptr->next){
     if((heads[min_char-65].cost+(tptr->weight))<heads[(tptr->ch)-65].cost &&heads[(tptr->ch)-65].vist!=VISTED)
-         {  printf("Us");
+         {
             heads[(tptr->ch)-65].cost=heads[min_char-65].cost+(tptr->weight);
             heads[(tptr->ch)-65].parent=min_char;
          }
-    else{
-            printf("REJECTED\n");
-         }
+
+
 }
-
-
-printf("%d\n",count);
 }
 
 }
