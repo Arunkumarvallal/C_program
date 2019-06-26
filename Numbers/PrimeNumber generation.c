@@ -1,7 +1,7 @@
     #include<stdio.h>
     #include<math.h>
     #include<stdlib.h>
-    #define number 100000
+    #define number 50
     int main(){
     long long int till,num,multiplier;
     long long int *primes=NULL;
@@ -18,8 +18,8 @@
     int index,ptr=0;
     for(index=0;index<number;index++){
         if(primes[index]==0){
-        //    printf("%d\t",index);
-            ptr++;
+           printf("%d\t",index);
+        //    ptr++;
         }
     }
     printf("%d\t",ptr);
